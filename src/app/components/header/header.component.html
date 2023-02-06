@@ -1,15 +1,28 @@
-<header class="navbar navbar-expand-md navbar-light bg-light bg-gradient border-bottom">
-  <div class="container-fluid">
-    <img class="image" src="/assets/images/a.jpg" alt="image">
+<nav class="navbar navbar-expand-lg bg-light">
+  <img class="image" src="/assets/images/a.jpg" alt="image">
 
-    <a class="navbar-brand">Caian S. Gerolamo | Botanist</a>
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <a class="nav-link" >Papers</a>
-        <a class="nav-link" >Projects</a>
-        <a class="nav-link" >About</a>
-        <a class="nav-link" >CV</a>
-      </ul>
-    </div>
+  <a class="navbar-brand" href="/">Caian S. Gerolamo | Botanist</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+    (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent"
+    [ngClass]="{ 'show': isCollapsed }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link active" href="/">Papers <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">CV</a>
+      </li>
+    </ul>
   </div>
-</header>
+</nav>
